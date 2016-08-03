@@ -21,6 +21,10 @@
         
         $(".small_icon .icon").click(function(){
           alert($(this).html());
+          
+          var id = $(this).html();
+          var id_val = $("#" + id).html();
+          $("#" + id).html(parseInt(id_val, 10) + 1);
         });
       });
     </script>
