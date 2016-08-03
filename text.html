@@ -30,8 +30,7 @@
           var pos = $("#" + id).position();
           
           $(cloneDom).css('position','absolute');
-          $(cloneDom).css('top',pos.top + 'px');
-          $(cloneDom).css('left',pos.left + 'px');
+          /*
           $( cloneDom ).animate({
             top: pos.top + 'px',
             left: pos.left + 'px'
@@ -40,7 +39,18 @@
             $("#" + id).html(parseInt(id_val, 10) + 1);
             $("#small_main_icon").css('display','none');
           });
-          
+          */
+          $( cloneDom ).animate({
+            left: pos.left + 'px'
+          }, 2000, function() {
+            $( this ).animate({
+              top: pos.top + 'px'
+            }, 2000, function() {
+              $(cloneDom).remove();
+              $("#" + id).html(parseInt(id_val, 10) + 1);
+              $("#small_main_icon").css('display','none');
+            });
+          });
           
           //$("#" + id).html(parseInt(id_val, 10) + 1);
           
