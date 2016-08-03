@@ -43,10 +43,10 @@
           */
           $( cloneDom ).animate({
             left: pos.left + 'px'
-          }, 1000, function() {
+          }, 500, function() {
             $( this ).animate({
               top: pos.top + 'px'
-            }, 1000, function() {
+            }, 500, function() {
               $(cloneDom).remove();
               $("#" + id).html(parseInt(id_val, 10) + 1);
               $("#small_main_icon").css('display','none');
