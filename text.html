@@ -36,7 +36,7 @@
             top: pos.top + 'px',
             left: pos.left + 'px'
           }, 2000, function() {
-            $(cloneDom).destroy();
+            $(cloneDom).remove();
             $("#" + id).html(parseInt(id_val, 10) + 1);
             $("#small_main_icon").css('display','none');
           });
