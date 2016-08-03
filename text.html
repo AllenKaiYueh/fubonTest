@@ -22,6 +22,10 @@
         $(".small_icon .icon").click(function(){
           console.log($(this).parent());
           
+          var cloneDom = $(this).parent();
+          
+          $(cloneDom).appendTo("#small_main_icon");
+          
           var id = $(this).html();
           var id_val = $("#" + id).html();
           //$("#" + id).html(parseInt(id_val, 10) + 1);
