@@ -22,15 +22,16 @@
         $(".small_icon .icon").click(function(){
           
           var cloneDom = $(this).parent().clone();
-          $(cloneDom).appendTo("#vote_icon");
-          $(cloneDom).css('top','50px');
+          $(cloneDom).appendTo("#small_main_icon");
+          
           
           var id = $(this).html();
           var id_val = $("#" + id).html();
           var pos = $("#" + id).position();
           
-          console.log(pos.top);
-          console.log(pos.left);
+          $(cloneDom).css('top',pos.top + 'px');
+          $(cloneDom).css('left',pos.left + 'px');
+         
           
           $("#" + id).html(parseInt(id_val, 10) + 1);
           
