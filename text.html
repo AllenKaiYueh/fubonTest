@@ -30,6 +30,7 @@
           var pos = $("#" + id).position();
           
           $(cloneDom).css('position','absolute');
+          $(cloneDom).css('left','50%');
           /*
           $( cloneDom ).animate({
             top: pos.top + 'px',
@@ -42,10 +43,10 @@
           */
           $( cloneDom ).animate({
             left: pos.left + 'px'
-          }, 2000, function() {
+          }, 1000, function() {
             $( this ).animate({
               top: pos.top + 'px'
-            }, 2000, function() {
+            }, 1000, function() {
               $(cloneDom).remove();
               $("#" + id).html(parseInt(id_val, 10) + 1);
               $("#small_main_icon").css('display','none');
