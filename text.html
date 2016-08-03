@@ -12,6 +12,10 @@
     <script type="text/javascript">
       $(function(){
         
+        $("#vote").mouseover(function({
+          alert('test');
+        }));
+        
       });
     </script>
     <style>
@@ -83,7 +87,7 @@
           </div>
         </div>
       </div>
-      <div class="main_icon">
+      <div class="main_icon" style="margin-top:50px;">
         <div style="width:100%; text-align:center;">
           <div style="width:100px;height:50px;">
             <input type="button" id="vote" value="Vote">
