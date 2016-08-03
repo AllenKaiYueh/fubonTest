@@ -15,10 +15,13 @@
         $("#small_main_icon").css('display','none');
         
         $("#vote").mouseover(function(){
-          $("#vote_icon").css('margin-top','40px');
+          $("#vote_icon").css('margin-top','20px');
           $("#small_main_icon").css('display','block');
         });
         
+        $(".small_icon .icon").click(function(){
+          alert($(this).html());
+        });
       });
     </script>
     <style>
