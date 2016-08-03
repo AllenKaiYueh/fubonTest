@@ -20,17 +20,19 @@
         });
         
         $(".small_icon .icon").click(function(){
-          console.log($(this).parent());
           
-          var cloneDom = $(this).parent();
-          
+          var cloneDom = $(this).parent().clone();
           $(cloneDom).appendTo("#vote_icon");
-          
           $(cloneDom).css('top','50px');
           
           var id = $(this).html();
           var id_val = $("#" + id).html();
-          //$("#" + id).html(parseInt(id_val, 10) + 1);
+          var pos = $("#" + id).position();
+          
+          console.log(pos.top);
+          console.log(pos.left);
+          
+          $("#" + id).html(parseInt(id_val, 10) + 1);
           
           //$("#small_main_icon").css('display','none');
         });
